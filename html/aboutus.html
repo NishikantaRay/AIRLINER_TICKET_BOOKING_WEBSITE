@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Styles.css -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/Ultimate-Testimonial-Slider.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Airliner</title>
+  </head>
+  <body  >
+    <!-- loading  -->
+    <div id="loading"></div>
+    <section id="mainpage">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark  text-center" >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../html/main.html"><h2 style="color:  #60cc69;">Airliner</h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  ">
+            <li class="nav-item"><a class="nav-link" href="../html/aboutus.html">Aboutus</a></li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Booking</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="../html/book.html">Airline Ticket</a>
+                <a class="dropdown-item" href="../html/webcheckin.html">Web Checking</a>
+                <a class="dropdown-item" href="../html/hotel.html">Hotel Booking</a>
+                <a class="dropdown-item" href="../html/cab.html">Cab Booking </a>
+                <a class="dropdown-item" href="../html/printpdf.html">Ticket Download</a>
+                <a class="dropdown-item" href="../html/cancel.html">Connection/Update</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../html/contactus.html">Contactus</a></li>
+            <li class="nav-item"><a class="nav-link" href="../html/travelplanning.html">Travelplanning</a></li>
+          </ul>
+          <ul class="navbar-nav ml-auto"><button class="btn btn-outline-info btn-rounded  waves-effect z-depth-0" onclick="signOut()" id="signout" type="submit">Sign out</button></ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding-bottom:30px ;"  >
+      <!-- Carousel indicators -->
+      <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+      </ol>
+      <!-- Wrapper for carousel items -->
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img style="height: 300px; width: 100%;" src="data:image/jpeg;base64,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" alt="First Slide">
+          </div>
+          <div class="carousel-item">
+              <img style="height: 300px; width: 100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-wf1QoLlTtFgrtCLrlkuQRAP--dw8qr-2Rw&usqp=CAU" alt="Second Slide">
+          </div>
+          <div class="carousel-item">
+              <img style="height: 300px; width: 100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7JNymtUT6f1qrT5PUVvVCoOhLJs_TC6_hiQ&usqp=CAU" alt="Third Slide">
+          </div>
+          <div class="carousel-item">
+            <img style="height: 300px; width: 100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ81i3H85WkHtL-mmRXBMY4g2uGgq-jVeqvOA&usqp=CAU" alt="Third Slide">
+        </div>
+        <div class="carousel-item">
+          <img style="height: 300px; width: 100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpEP34K7BlVEWqbh0wqnOHSd2Fs9rQG1UZ2A&usqp=CAU" alt="Third Slide">
+      </div>
+      </div>
+      <!-- Carousel controls -->
+      <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+    <div class="row" >
+      <div class="col-md-8 col-12" style="padding-bottom: 50px;" >
+          <div class="container" >
+              <div class="text-justify">
+                  <h3>Airliner</h3><br>
+                  <h5>Airliner in India. Flights with hotel booking,
+                      Contact Number, Photos, Maps. booking platform, india on Justdial.</h5>
+                  <p style="padding: 5px;font-size: 15px;">In India,Airliner is a recognized name in patient care. They are one of the well-known Hospitals in DLW. Backed with a vision to offer the best in patient care and equipped with technologically advanced healthcare facilities,
+                      they are one of the upcoming names in the Booking industry. Located in , this hospital is easily accessible by various means of transport. A team of well-trained medical staff, non-medical staff and experienced clinical technicians work round-the-clock to offer various services that include Deluxe Room , General Ward , I.c.c.u. , Opd Services 10.00 2.00 7.00 8.00 Pm, Pathology Lab , Xray . Their professional services make them a sought after Hospitals in Varanasi. A team of doctors on board, including specialists are equipped with the knowledge and expertise for handling various types of medical cases.
+                    
+                    At Care Booking in DLW, the various modes of payment are accepted. You can reach them at Bhikhari Pur,B.h.u Rd,Dlw-221004. The contact number of this hospital is +(91)-542-2319256. This establishment has been rated a 4.2 from a total of 0+ ratings. This listing is also listed in Hospitals, Private Hospitals.</p>
+                    <p style="padding: 5px;font-size: 15px;">In Varanasi, Care Hospital is a recognized name in patient care. They are one of the well-known Hospitals in DLW. Backed with a vision to offer the best in patient care and equipped with technologically advanced healthcare facilities,
+                      they are one of the upcoming names in the healthcare industry. Located in , this hospital is easily accessible by various means of transport. A team of well-trained medical staff, non-medical staff and experienced clinical technicians work round-the-clock to offer various services that include Deluxe Room , General Ward , I.c.c.u. , Opd Services 10.00 2.00 7.00 8.00 Pm, Pathology Lab , Xray . Their professional services make them a sought after Hospitals in Varanasi. A team of doctors on board, including specialists are equipped with the knowledge and expertise for handling various types of medical cases.
+                    
+                    At Care Hospital in DLW, the various modes of payment are accepted. You can reach them at Bhikhari Pur,B.h.u Rd,Dlw-221004. The contact number of this hospital is +(91)-542-2319256. This establishment has been rated a 4.2 from a total of 0+ ratings. This listing is also listed in Hospitals, Private Hospitals.</p>
+                      <!-- Start: Ultimate Testimonial Slider -->
+                      <div class="carousel slide" data-ride="carousel" data-interval="70000" id="carousel-t">
+                        <div class="carousel-inner">
+                            <!-- Start: Man -->
+                            <div class="carousel-item active">
+                                <!-- Start: Testimonial Content -->
+                                <div class="col-9 text-center mx-auto testimonial-content"><img class="rounded-circle" src="../img/test-man.jpg?h=f25d6bacdc1733905006cb1d39ec2c9e" width="100">
+                                    <!-- Start: Rating -->
+                                    <p class="text-center rating">5&nbsp;<i class="icon ion-star"></i></p>
+                                    <!-- End: Rating -->
+                                    <!-- Start: Name -->
+                                    <p class="signature">John D.</p>
+                                    <!-- End: Name -->
+                                    <!-- Start: Date -->
+                                    <p class="text-center date">April 21, 2014<br></p>
+                                    <!-- End: Date -->
+                                </div>
+                                <!-- End: Testimonial Content -->
+                            </div>
+                            <!-- End: Man -->
+                            <!-- Start: Woman -->
+                            <div class="carousel-item">
+                                <!-- Start: Testimonial Content -->
+                                <div class="col-9 offset-sm-1 offset-xl-1 text-center mx-auto testimonial-content"><img class="rounded-circle" src="../img/test-woman.jpg?h=eec9340f811805a4dedde333af7af172" width="100">
+                                    <!-- Start: Rating -->
+                                    <p class="text-center rating">5&nbsp;<i class="fa fa-star"></i></p>
+                                    <!-- End: Rating -->
+                                    <!-- Start: Name -->
+                                    <p class="signature">Jane D.</p>
+                                    <!-- End: Name -->
+                                    <!-- Start: Date -->
+                                    <p class="text-center date">April 21, 2014<br></p>
+                                    <!-- End: Date -->
+                                </div>
+                                <!-- End: Testimonial Content -->
+                            </div>
+                            <!-- End: Woman -->
+                            <!-- Start: Male -->
+                            <div class="carousel-item">
+                                <!-- Start: Testimonial Content -->
+                                <div class="col-9 text-center mx-auto testimonial-content"><img class="rounded-circle" src="../img/test-male-pic.jpg?h=5ec4ea2c2bcc902b8e43eb7cc928f06f" width="100">
+                                    <!-- Start: Rating -->
+                                    <p class="text-center rating">5&nbsp;<i class="fa fa-star"></i></p>
+                                    <!-- End: Rating -->
+                                    <!-- Start: Name -->
+                                    <p class="signature">John D.</p>
+                                    <!-- End: Name -->
+                                    <!-- Start: Date -->
+                                    <p class="text-center date">April 21, 2014<br></p>
+                                    <!-- End: Date -->
+                                </div>
+                                <!-- End: Testimonial Content -->
+                            </div>
+                            <!-- End: Male -->
+                            <!-- Start: Female -->
+                            <div class="carousel-item">
+                                <!-- Start: Testimonial Content -->
+                                <div class="col-9 offset-xl-1 text-center mx-auto testimonial-content"><img class="rounded-circle" src="../img/test-female-pic.jpg?h=a69aaac26282a5945469d162d2004751" width="100">
+                                    <!-- Start: Rating -->
+                                    <p class="text-center rating">5&nbsp;<i class="fa fa-star"></i></p>
+                                    <!-- End: Rating -->
+                                    <!-- Start: Name -->
+                                    <p class="signature">Jane D.</p>
+                                    <!-- End: Name -->
+                                    <!-- Start: Date -->
+                                    <p class="text-center date">April 21, 2014<br></p>
+                                    <!-- End: Date -->
+                                </div>
+                                <!-- End: Testimonial Content -->
+                            </div>
+                            <!-- End: Female -->
+                        </div>
+                        <div>
+                            <!-- Start: Previous --><a class="carousel-control-prev" href="#carousel-t" role="button" data-slide="prev"><i class="icon ion-android-arrow-dropleft-circle d-flex d-lg-flex justify-content-center align-items-center"></i><span class="sr-only">Previous</span></a>
+                            <!-- End: Previous -->
+                            <!-- Start: Next --><a class="carousel-control-next" href="#carousel-t" role="button" data-slide="next"><i class="icon ion-android-arrow-dropright-circle d-flex d-lg-flex justify-content-center align-items-center"></i><span class="sr-only">Next</span></a>
+                            <!-- End: Next -->
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-t" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-t" data-slide-to="1"></li>
+                            <li data-target="#carousel-t" data-slide-to="2"></li>
+                            <li data-target="#carousel-t" data-slide-to="3"></li>
+                        </ol>
+                    </div>
+                    <p style="padding: 5px;font-size: 15px;">In Varanasi, Care Hospital is a recognized name in patient care. They are one of the well-known Hospitals in DLW. Backed with a vision to offer the best in patient care and equipped with technologically advanced healthcare facilities,
+                      they are one of the upcoming names in the healthcare industry. Located in , this hospital is easily accessible by various means of transport. A team of well-trained medical staff, non-medical staff and experienced clinical technicians work round-the-clock to offer various services that include Deluxe Room , General Ward , I.c.c.u. , Opd Services 10.00 2.00 7.00 8.00 Pm, Pathology Lab , Xray . Their professional services make them a sought after Hospitals in Varanasi. A team of doctors on board, including specialists are equipped with the knowledge and expertise for handling various types of medical cases.
+                    At Care Hospital in DLW, the various modes of payment are accepted. You can reach them at Bhikhari Pur,B.h.u Rd,Dlw-221004. The contact number of this hospital is +(91)-542-2319256. This establishment has been rated a 4.2 from a total of 0+ ratings. This listing is also listed in Hospitals, Private Hospitals.</p>
+                    <section id="lab_social_icon_footer">
+                      <div class="container">
+                              <div class="text-center center-block">
+                                <ul class="social-icons">
+                                  <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                                  <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                                  <li><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a></li>
+                                  <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
+                                </ul>
+                          </div>
+                      </div>
+                      </section>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 col-12" id="disable">
+          <div class="text-center" style="padding-top: 50px;padding-right: 20px;padding-left: 20px;">
+              <img src="https://images.unsplash.com/photo-1533042789716-e9a9c97cf4ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+          </div><br><br>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3606.757880188088!2d82.98190641501189!3d25.312337533842705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d25.31328!2d82.98168319999999!4m5!1s0x398e2df95d41fe93%3A0x707b2e7e4e7df4d7!2sShubham%20Hospital%2C%20D-62%2F63%2C%20Nagar%20Nigam%20Rd%2C%20near%20Heart%20Hospital%2C%20Chandrika%20Nagar%2C%20Sigra%2C%20Varanasi%2C%20Uttar%20Pradesh%20221010!3m2!1d25.311910899999997!2d82.986507!5e0!3m2!1sen!2sin!4v1600588570674!5m2!1sen!2sin" width="500" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><br><br>
+      </div>
+    </div>
+    <!-- footer -->
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p >Product Offerings
+              Flights |Airlines |Domestic Airlines |Domestic Flights |International Airlines |SriLankan Airlines |Emirates Airlines |Saudi Airlines |Nepal Airlines |Singapore Airlines |Malaysia Airlines |Indigo Flights |Air India Airlines |Go Air Airlines |Spicejet Flights |Airasia Flights |International Flights |Flight Schedule |Airline Flight status |Cheap Air tickets |Web Checkin |Hotels |Domestic Hotels (In India) |Homestays |Yatra for Business |Yatra for SMEs |India Tourism |International Tourism |Holidays |Domestic Holiday Packages |International Holiday Packages |Trade Fairs 2020 |Activities |Domestic Activities |International Activities |Bus booking |Bus Ticket |Trains |IRCTC |Indian Railways |Check Train PNR Status |Monuments of India |Taj Mahal |Qutub Minar |Red Fort |Yatra Android Mobile App |Yatra iOS Mobile App |Gift Vouchers |Careers |</p>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Company Information</h6>
+            <ul class="footer-links">
+              <li><a href="">More About Us </a></li>
+              <li><a href="">Leadership Team</a></li>
+              <li><a href="">Our Products </a></li>
+              <li><a href="">Awards Won</a></li>
+              <li><a href="">Customer Testimonials</a></li>
+              <li><a href="">Press Releases</a></li>
+              <li><a href="">Company Overview  </a></li>
+              <li><a href="">Quarterly Earnings</a></li>
+              <li><a href="">Reports & Presentations  </a></li>
+              <li><a href="">Corporate Governance </a></li>
+              <li><a href="">Investor FAQs</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Partner With Airliner</h6>
+            <ul class="footer-links">
+              <li><a href="">Travel Agent Sign Up</a></li>
+              <li><a href="">Become a Cab Vendor</a></li>
+              <li><a href="">Register Your Hotel</a></li>
+              <li><a href="">Register Your Homestay</a></li>
+              <li><a href="">Sell Holiday Packages</a></li>
+              <li><a href="">Sell Your Activities</a></li>
+              <li><a href="">List Your Bus Inventory</a></li>
+              <li><a href="">Advertise With Us</a></li>
+              <li><a href="">Terms & Conditions</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Support & FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by<a href="#">Airliner</a>.</p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+    </section>
+    
+    <script defer src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>  
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
+    <script>
+      var preload=document.getElementById('loading');
+      mainpage.style.display='none';
+      setTimeout(function(){
+        loading.style.display ='none';
+        mainpage.style.display='block';
+      },2000);
+    </script>
+    <script src="../js/contact.js"></script>
+  </body>
+</html>

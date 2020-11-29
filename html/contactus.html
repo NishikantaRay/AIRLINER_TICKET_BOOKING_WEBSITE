@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Styles.css -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>WEBPORTAL</title>
+  </head>
+  <body>
+    <!-- loading  -->
+    <div id="loading"></div>
+    <section id="mainpage">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark text-center">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../html/main.html"><h2 style="color:  #60cc69;">Airliner</h2></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item"><a class="nav-link" href="../html/aboutus.html">Aboutus</a></li>
+                <li class="nav-item dropdown ">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Booking</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <a class="dropdown-item" href="../html/book.html">Airline Ticket</a>
+                    <a class="dropdown-item" href="../html/webcheckin.html">Web Checking</a>
+                    <a class="dropdown-item" href="../html/hotel.html">Hotel Booking</a>
+                    <a class="dropdown-item" href="../html/cab.html">Cab Booking </a>
+                    <a class="dropdown-item" href="../html/printpdf.html">Ticket Download</a>
+                    <a class="dropdown-item" href="../html/cancel.html">Connection/Update</a>
+                  </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="../html/contactus.html">Contactus</a></li>
+                <li class="nav-item"><a class="nav-link" href="../html/travelplanning.html">Travelplanning</a></li>
+              </ul>
+              <ul class="navbar-nav ml-auto"><button class="btn btn-outline-info btn-rounded  waves-effect z-depth-0" onclick="signOut()" id="signout" type="submit">Sign out</button></ul>
+            </div>
+          </div>
+        </nav>
+        <!-- navbar end -->
+        <!-- main part -->
+        <div class="container">
+          <div class="wrapper">
+            <div class="company-info">
+              <h3>Airliner</h3>
+              <ul>
+                <li><i class="fa fa-road"></i> 44 Something st</li>
+                <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+                <li><i class="fa fa-envelope"></i> test@acme.test</li>
+              </ul>
+            </div>
+            <div class="contact">
+              <h3>Email Us</h3>
+              <div class="alert">Your message has been sent</div>
+              <form id="contactForm">
+                <p>
+                  <label>Name</label>
+                  <input type="text" name="name" placeholder="Enter your Name" id="name" required>
+                </p>
+                <p>
+                  <label>Company</label>
+                  <input type="text" name="company" placeholder="Enter your Company name" id="company">
+                </p>
+                <p>
+                  <label>Email Address</label>
+                  <input type="email" name="email" placeholder="Enter your Email" id="email" required>
+                </p>
+                <p>
+                  <label>Phone Number</label>
+                  <input type="text" name="phone" placeholder="Enter your phone number" id="phone">
+                </p>
+                <p class="full">
+                  <label>Message</label>
+                  <textarea name="message" rows="5" id="message" placeholder="Enter your comments"></textarea>
+                </p>
+                <p class="full">
+                  <button type="submit">Submit</button>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      <!-- footer -->
+      <!-- Site footer -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p >Product Offerings
+                Flights |Airlines |Domestic Airlines |Domestic Flights |International Airlines |SriLankan Airlines |Emirates Airlines |Saudi Airlines |Nepal Airlines |Singapore Airlines |Malaysia Airlines |Indigo Flights |Air India Airlines |Go Air Airlines |Spicejet Flights |Airasia Flights |International Flights |Flight Schedule |Airline Flight status |Cheap Air tickets |Web Checkin |Hotels |Domestic Hotels (In India) |Homestays |Yatra for Business |Yatra for SMEs |India Tourism |International Tourism |Holidays |Domestic Holiday Packages |International Holiday Packages |Trade Fairs 2020 |Activities |Domestic Activities |International Activities |Bus booking |Bus Ticket |Trains |IRCTC |Indian Railways |Check Train PNR Status |Monuments of India |Taj Mahal |Qutub Minar |Red Fort |Yatra Android Mobile App |Yatra iOS Mobile App |Gift Vouchers |Careers |</p>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <h6>Company Information</h6>
+              <ul class="footer-links">
+                <li><a href="">More About Us </a></li>
+                <li><a href="">Leadership Team</a></li>
+                <li><a href="">Our Products </a></li>
+                <li><a href="">Awards Won</a></li>
+                <li><a href="">Customer Testimonials</a></li>
+                <li><a href="">Press Releases</a></li>
+                <li><a href="">Company Overview  </a></li>
+                <li><a href="">Quarterly Earnings</a></li>
+                <li><a href="">Reports & Presentations  </a></li>
+                <li><a href="">Corporate Governance </a></li>
+                <li><a href="">Investor FAQs</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <h6>Partner With Airliner</h6>
+              <ul class="footer-links">
+                <li><a href="">Travel Agent Sign Up</a></li>
+                <li><a href="">Become a Cab Vendor</a></li>
+                <li><a href="">Register Your Hotel</a></li>
+                <li><a href="">Register Your Homestay</a></li>
+                <li><a href="">Sell Holiday Packages</a></li>
+                <li><a href="">Sell Your Activities</a></li>
+                <li><a href="">List Your Bus Inventory</a></li>
+                <li><a href="">Advertise With Us</a></li>
+                <li><a href="">Terms & Conditions</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Support & FAQs</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by<a href="#">Airliner</a>.</p>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer end -->
+      <!-- footer end -->
+    </section>
+    <script defer src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <!-- index.js -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- <script src="../js/index.js"></script> -->
+    <script src="../js/contact.js"></script>
+    <script>
+      var preload=document.getElementById('loading');
+      mainpage.style.display='none';
+      setTimeout(function(){
+        loading.style.display ='none';
+        mainpage.style.display='block';
+      },2000);
+    </script>
+  </body>
+</html>

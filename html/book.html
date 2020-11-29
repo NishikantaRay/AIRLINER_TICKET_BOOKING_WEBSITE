@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Styles.css -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>WEBPORTAL</title>
+    <style>
+      ::placeholder{
+        font-size: 12px;
+        color: rgb(102, 98, 98);
+        font-weight: bold;
+        padding-left: 7px;
+      }
+      form:before {
+          content: '';
+          padding-top: 50px;
+          height: 110%;
+          left: 10%;
+          position: absolute;
+          top: 0;
+          width: 80%;
+          background-color: rgba(0,0,0,0.3);
+          z-index: -1;
+          border-radius: 10px;
+      } 
+      form input{
+        /* border-radius: 2px; */
+        padding: 3px;
+
+      }
+      /* Styles for wrapping the search box */
+      .main {
+          width: 70%;
+          margin: 50px auto;
+      }
+      #error_message{
+        margin-bottom: 20px;
+        background: #fe8b8e;
+        padding: 0px;
+        text-align: center;
+        font-size: 14px;
+        transition: all 0.5s ease;
+      }
+    </style>
+
+  </head>
+  <body>
+    <!-- loading  -->
+    <div id="loading"></div>
+    <section id="mainpage">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark  text-center" >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../html/main.html"><h2 style="color:  #60cc69;">Airliner</h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  ">
+            <li class="nav-item"><a class="nav-link" href="../html/aboutus.html">Aboutus</a></li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Booking</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="../html/book.html">Airline Ticket</a>
+                <a class="dropdown-item" href="../html/webcheckin.html">Web Checking</a>
+                <a class="dropdown-item" href="../html/hotel.html">Hotel Booking</a>
+                <a class="dropdown-item" href="../html/cab.html">Cab Booking </a>
+                <a class="dropdown-item" href="../html/printpdf.html">Ticket Download</a>
+                <a class="dropdown-item" href="../html/cancel.html">Connection/Update</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../html/contactus.html">Contactus</a></li>
+            <li class="nav-item"><a class="nav-link" href="../html/travelplanning.html">Travelplanning</a></li>
+          </ul>
+          <ul class="navbar-nav ml-auto"><button class="btn btn-outline-info btn-rounded  waves-effect z-depth-0" onclick="signOut()" id="signout" type="submit">Sign out</button></ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+    <div id="compview">
+      <section id="cover"  class="min-vh-100" >
+        <div id="cover-caption">
+            <div class="container" >
+              <div class="alert">Your message has been sent</div>
+              <div id="error_message"></div>
+                <div class="row text-white main">
+                        <div class="px-3">
+                            <form id="book" onsubmit="return validate();" class="justify-content-center" >
+                              <div class="row" >
+                                <div class="col-md-4 ">
+                                  <p>
+                                    <label>Name of Passanger</label> 
+                                    <input type="text" name="name" placeholder="Please Enter Your Name" id="name"  required>
+                                  </p>
+                                  <p>
+                                    <label>Email Id</label>
+                                    <input type="email" name="email" placeholder="Enter your Email address" id="email" required>
+                                  </p>
+                                  <p>
+                                    <label>Phone Number</label>
+                                    <input type="text" placeholder="Enter your Phone Number" name="phone" id="phone">
+                                  </p>
+                                  <p>
+                                    <label>Age of Passanger</label>
+                                    <input type="text" placeholder="Enter your age" name="phone" id="age">
+                                  </p>
+                                </div>
+                                <div class="col-md-4  ">
+                                  <p>
+                                    <label>From</label><br>
+                                    <input type="text" name="name" placeholder="AirportName" id="from" required>
+                                  </p>
+                                  <p>
+                                    <label>To</label><br>
+                                    <input type="text" placeholder="AirportName" name="name" id="to" required>
+                                  </p>
+                                  <p class="full"><br><br>
+                                    <button type="submit" class="btn btn-outline-warning btn-rounded bg-dark text-warning  waves-effect z-depth-0">Submit</button>
+                                  </p>
+                                </div>
+                                <div class="col-md-4 ">
+                                  <p>
+                                    <label>Deparature</label>
+                                    <input type="date" placeholder="Departauredate" name="name" id="dep" required>
+                                  </p>
+                                  <p>
+                                    <label>Returning</label>
+                                    <input type="date" placeholder="ReturningDate" name="name" id="ret" required>
+                                  </p>
+                                  <p>
+                                    <label>Traveller & Class</label>
+                                    <input type="text" placeholder="Eg:Economy" name="name" id="pass" required>
+                                  </p>
+                                  <p>
+                                    <label>Passanger</label>
+                                    <input type="number" placeholder="NoofTravellers" name="name" id="passanger" >
+                                  </p>
+                                </div>
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    </div>
+    <div id="mobview">
+      <section id="cover"  class="min-vh-100" style="height: 250%; padding-bottom: 100px;">
+        <div id="cover-caption">
+            <div class="container" >
+              <div class="alert">Your message has been sent</div>
+                <div class="row text-white main">
+                        <div class="px-3">
+                            <form id="book"  class="justify-content-center" style="height: 80%;" >
+                              <div class="row" >
+                                <div class="col-12 ">
+                                  <p>
+                                    <label>Name of Passanger</label> 
+                                    <input type="text" name="name" placeholder="EnterYourName" id="name"  required>
+                                  </p>
+                                  <p>
+                                    <label>Email Id</label><br>
+                                    <input type="email" name="email" placeholder="xyz@gmail.com" id="email" required>
+                                  </p>
+                                  <p>
+                                    <label>Phone Number</label>
+                                    <input type="text" placeholder="Phone Number" name="phone" id="phone">
+                                  </p>
+                                  <p>
+                                    <label>Age of Passanger</label>
+                                    <input type="text" placeholder="Age:12" name="phone" id="age">
+                                  </p>
+                                </div>
+                                <div class="col-12">
+                                  <p>
+                                    <label>Deparature</label><br>
+                                    <input type="date" placeholder="Departauredate" name="name" id="dep" required>
+                                  </p>
+                                  <p>
+                                    <label>Returning</label><br>
+                                    <input type="date" placeholder="ReturningDate" name="name" id="ret" required>
+                                  </p>
+                                  <p>
+                                    <label>Traveller & Class</label>
+                                    <input type="text" placeholder="Eg:Economy" name="name" id="pass" required>
+                                  </p>
+                                  <p>
+                                    <label>Passanger</label><br>
+                                    <input type="number" placeholder="NoofTravellers" name="name" id="passanger" >
+                                  </p>
+                                </div>
+                                <div class="col-12  ">
+                                  <p>
+                                    <label>From</label><br>
+                                    <input type="text" name="name" placeholder="AirportName" id="from" required>
+                                  </p>
+                                  <p>
+                                    <label>To</label><br>
+                                    <input type="text" placeholder="AirportName" name="name" id="to" required>
+                                  </p>
+                                  <p class="full"><br><br>
+                                    <!-- onclick="sendemail(); " -->
+                                    <button type="submit"   class="btn btn-outline-warning btn-rounded bg-dark text-warning  waves-effect z-depth-0">Submit</button>
+                                  </p>
+                                </div>
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    </div>
+    
+    <!-- footer -->
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p >Product Offerings
+              Flights |Airlines |Domestic Airlines |Domestic Flights |International Airlines |SriLankan Airlines |Emirates Airlines |Saudi Airlines |Nepal Airlines |Singapore Airlines |Malaysia Airlines |Indigo Flights |Air India Airlines |Go Air Airlines |Spicejet Flights |Airasia Flights |International Flights |Flight Schedule |Airline Flight status |Cheap Air tickets |Web Checkin |Hotels |Domestic Hotels (In India) |Homestays |Yatra for Business |Yatra for SMEs |India Tourism |International Tourism |Holidays |Domestic Holiday Packages |International Holiday Packages |Trade Fairs 2020 |Activities |Domestic Activities |International Activities |Bus booking |Bus Ticket |Trains |IRCTC |Indian Railways |Check Train PNR Status |Monuments of India |Taj Mahal |Qutub Minar |Red Fort |Yatra Android Mobile App |Yatra iOS Mobile App |Gift Vouchers |Careers |</p>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Company Information</h6>
+            <ul class="footer-links">
+              <li><a href="">More About Us </a></li>
+              <li><a href="">Leadership Team</a></li>
+              <li><a href="">Our Products </a></li>
+              <li><a href="">Awards Won</a></li>
+              <li><a href="">Customer Testimonials</a></li>
+              <li><a href="">Press Releases</a></li>
+              <li><a href="">Company Overview  </a></li>
+              <li><a href="">Quarterly Earnings</a></li>
+              <li><a href="">Reports & Presentations  </a></li>
+              <li><a href="">Corporate Governance </a></li>
+              <li><a href="">Investor FAQs</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Partner With Airliner</h6>
+            <ul class="footer-links">
+              <li><a href="">Travel Agent Sign Up</a></li>
+              <li><a href="">Become a Cab Vendor</a></li>
+              <li><a href="">Register Your Hotel</a></li>
+              <li><a href="">Register Your Homestay</a></li>
+              <li><a href="">Sell Holiday Packages</a></li>
+              <li><a href="">Sell Your Activities</a></li>
+              <li><a href="">List Your Bus Inventory</a></li>
+              <li><a href="">Advertise With Us</a></li>
+              <li><a href="">Terms & Conditions</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Support & FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by<a href="#">Airliner</a>.</p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+    
+    </section>
+    <!-- <script src= 
+    "https://smtpjs.com/v3/smtp.js"> 
+  </script>  -->
+    <script defer src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- index.js -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- <script src="index.js"></script> -->
+    <script src="../js/book.js"></script>
+    <script>
+      var preload=document.getElementById('loading');
+      mainpage.style.display='none';
+      setTimeout(function(){
+        loading.style.display ='none';
+        mainpage.style.display='block';
+      },2000);
+      // navbar
+      const $dropdown = $(".dropdown");
+      const $dropdownToggle = $(".dropdown-toggle");
+      const $dropdownMenu = $(".dropdown-menu");
+      const showClass = "show";
+
+      $(window).on("load resize", function() {
+        if (this.matchMedia("(min-width: 768px)").matches) {
+          $dropdown.hover(
+            function() {
+              const $this = $(this);
+              $this.addClass(showClass);
+              $this.find($dropdownToggle).attr("aria-expanded", "true");
+              $this.find($dropdownMenu).addClass(showClass);
+            },
+            function() {
+              const $this = $(this);
+              $this.removeClass(showClass);
+              $this.find($dropdownToggle).attr("aria-expanded", "false");
+              $this.find($dropdownMenu).removeClass(showClass);
+            }
+          );
+        } else {
+          $dropdown.off("mouseenter mouseleave");
+        }
+      });
+      // end
+      function validate(){
+      var name = document.getElementById("name").value;
+      // var subject = document.getElementById("subject").value;
+      var phone = document.getElementById("phone").value;
+      var email = document.getElementById("email").value;
+      // var message = document.getElementById("message").value;
+      var error_message = document.getElementById("error_message");
+      
+      error_message.style.padding = "10px";
+      
+      var text;
+      if(name.length < 5){
+        text = "Please Enter valid Name";
+        error_message.innerHTML = text;
+        return false;
+      }
+      // if(subject.length < 10){
+      //   text = "Please Enter Correct Subject";
+      //   error_message.innerHTML = text;
+      //   return false;
+      // }
+      if(isNaN(phone) || phone.length != 10){
+        text = "Please Enter valid Phone Number";
+        error_message.innerHTML = text;
+        return false;
+      }
+      if(email.indexOf("@") == -1 || email.length < 6){
+        text = "Please Enter valid Email";
+        error_message.innerHTML = text;
+        return false;
+      }
+      // if(message.length <= 140){
+      //   text = "Please Enter More Than 140 Characters";
+      //   error_message.innerHTML = text;
+      //   return false;
+      // }
+      alert("Form Submitted Successfully!");
+      return true;
+    }
+    </script>
+  </body>
+</html>
